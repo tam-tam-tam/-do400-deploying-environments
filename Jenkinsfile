@@ -64,7 +64,7 @@ pipeline {
 		APP_NAMESPACE = "${RHT_OCP4_DEV_USER}-shopping-cart-production"
 		QUAY = credentials('QUAY_USER')
 	    }
-	    input { message 'Deploy to prouction?' }
+	    input { message 'Deploy to production?' }
 	    steps {
 		sh """
 		    oc set image \
@@ -76,3 +76,4 @@ pipeline {
 	}
     }	
 }
+
